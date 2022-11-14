@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+ <meta charset="UTF-8">
+
+ <title>MQC HBI</title>
+
+
+
+ <style>
+
+
+
+  form{
+
+   background:linear-gradient(gray,steelblue);
+
+   color: white;
+
+   padding: 15%;
+
+   margin:auto;
+
+  }
+
+ </style>
+
+
+
+</head>
+
+<body>
+
+
+
+<!-- Form input data Angka -->
+
+ <form name="form"  align="center" >
+<table align="center">
+  
+					
+        <tr>	
+					<td>Point Defect</td>
+					<td>
+                   
+						<input type="text" name="angka1"  >
+					</td>
+				</tr>
+        </tr>
+				<tr>
+        <tr>
+					<td>Lebar Kain</td>
+					<td><input type="numeric" name="angka2"  ></td>
+				</tr>
+        </tr>
+				<tr>
+					<td>Panjang Kain</td>
+					<td><input type="numeric" name="angka3"  ></td>
+				</tr>
+				
+				<tr>
+					<td>HASIL</td>
+					<td><output type="numeric" name="hasil"  ></td>
+				</tr>
+
+
+	
+</table>
+<input type="button" onclick="hitung()" value="HITUNG">
+  
+  <input type="reset"  onclick="clear()" value="CLEAR">
+ </form>
+
+
+
+<!-- javascript -->
+
+ <script>
+
+  function cek(){
+
+   if (form.angka1.value == "" || form.angka2.value == "") {
+
+    alert("Angka Kosong");
+
+    exit
+
+   }
+
+  }
+	function hitung(){
+
+   cek();
+
+   a = parseInt(form.angka1.value);
+
+   b = parseInt(form.angka2.value);
+   c = parseInt(form.angka3.value);
+
+   form.hasil.value = (a*3600)/(b*c);
+
+  }
+  function tambah(){
+
+   cek();
+
+   a = parseInt(form.angka1.value);
+
+   b = parseInt(form.angka2.value);
+
+   form.hasil.value = a+b;
+
+  }
+
+  function kurang(){
+
+   cek();
+
+   a = parseInt(form.angka1.value);
+
+   b = parseInt(form.angka2.value);
+
+   form.hasil.value = a-b;
+
+  }
+
+  function kali(){
+
+   cek();
+
+   a = parseInt(form.angka1.value);
+
+   b = parseInt(form.angka2.value);
+
+   form.hasil.value = a*b;
+
+  }
+
+  function bagi(){
+
+   cek();
+
+   a = parseInt(form.angka1.value);
+
+   b = parseInt(form.angka2.value);
+
+   form.hasil.value = a/b;
+
+  }
+
+
+
+ </script>
+
+</body>
+
+</html>
